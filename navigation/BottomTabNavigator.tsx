@@ -5,19 +5,19 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
+import HomeScreen from '../screens/HomeScreen/index';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { BottomTabParamList, HomeParamList, TabTwoParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
-  const colorScheme = useColorScheme();
+  const darktheme = useColorScheme();
 
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+      tabBarOptions={{ activeTintColor: Colors[darktheme].tint }}>
       <BottomTab.Screen
         name="Home"
         component={TabOneNavigator}
@@ -59,7 +59,7 @@ function TabOneNavigator() {
     <HomeStack.Navigator>
       <HomeStack.Screen
         name="HomeScreen"
-        component={TabOneScreen}
+        component={HomeScreen}
         options={{ headerShown: false }}
       />
     </HomeStack.Navigator>
