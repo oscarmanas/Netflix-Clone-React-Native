@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './styles';
 import { FlatList } from 'react-native';
 import { View } from '../../components/Themed';
-import categories from '../../assets/Netflix Assets/data/categories';
+import categories from '../../assets/data/categories';
 import HomeCategory from '../../components/HomeCategory';
 
 const HomeScreen = () =>  {
